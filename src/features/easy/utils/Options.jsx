@@ -64,9 +64,7 @@ function Steps() {
     }
 
     if (currentStep === 3) {
-      setTimeout(() => {
-        dispatch(checkWinner());
-      }, 500);
+      dispatch(checkWinner());
     }
   }, [dispatch, currentStep]);
 
@@ -123,7 +121,7 @@ export default Steps;
 
 const StyledStepsEasy = styled.article`
   > div {
-    gap: 4rem;
+    gap: 2rem;
   }
 
   .paper {
@@ -146,7 +144,7 @@ const StyledStepsEasy = styled.article`
       background-repeat: no-repeat;
       background-position: center;
       padding: 1rem;
-      background-size: 70%;
+      background-size: 55%;
 
       @media (min-width: 45rem) {
         background-size: 50%;
@@ -165,7 +163,7 @@ export const StyledSteps = styled.div`
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-items: center;
-  padding: 2rem 0rem;
+  padding: 2rem 0;
   margin: 0 auto;
   max-width: 30rem;
 
@@ -212,7 +210,7 @@ export const StyledSteps = styled.div`
 
   @media (min-width: 55rem) {
     max-width: 50rem;
-    padding: 4rem 2rem;
+    padding: 4rem 0;
 
     .game-card {
       padding: 1.5rem;
@@ -240,6 +238,7 @@ export const StyledSteps = styled.div`
       props.type === 4 &&
       css`
         grid-template-columns: repeat(3, 1fr);
+        max-width: 100%;
       `}
   }
 

@@ -16,7 +16,7 @@ export default App;
 
 const StyledApp = styled.main`
   width: 90vw;
-  max-width: 60rem;
+  max-width: 65rem;
   background-image: var(--Gradient);
-  margin: 2rem auto;
+  margin: 1rem auto;
 `;

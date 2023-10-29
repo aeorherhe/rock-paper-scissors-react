@@ -56,7 +56,7 @@ export const StyledHeader = styled.header`
   .stats,
   .score {
     text-align: center;
-    padding: 1.5rem 3rem;
+    padding: 1rem 3rem;
     background-color: var(--White);
     border-radius: var(--border-radius);
     color: var(--Dark-Text);

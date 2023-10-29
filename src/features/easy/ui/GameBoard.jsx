@@ -33,13 +33,9 @@ export default GameBoard;
 /****************** styled component ***************/
 
 export const StyledGameBoard = styled.section`
-  display: flex;
   border-radius: var(--border-radius);
   margin: 2rem 0;
   text-transform: uppercase;
   letter-spacing: 0.125rem;
-  flex-direction: column;
   text-align: center;
-  gap: 2rem;
-  height: 100%;
 `;

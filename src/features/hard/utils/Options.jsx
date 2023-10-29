@@ -65,9 +65,7 @@ function Steps() {
     }
 
     if (currentStep === 3) {
-      setTimeout(() => {
-        dispatch(checkWinner());
-      }, 500);
+      dispatch(checkWinner());
     }
   }, [dispatch, currentStep]);
 
@@ -161,7 +159,6 @@ const StyledStepsHard = styled.article`
       background-image: url(/images/bg-pentagon.svg);
       background-repeat: no-repeat;
       background-position: center;
-      /* background-size: 70%; */
       padding: 1rem;
 
       @media (min-width: 55rem) {
