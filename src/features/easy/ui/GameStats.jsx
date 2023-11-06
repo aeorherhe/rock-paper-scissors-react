@@ -28,10 +28,8 @@ const GameStats = () => {
           <h1>{sessionScore?.totalLoses || totalLoses}</h1>
         </div>
       </div>
-      <StyledButton>
-        <button className="btn reset" onClick={() => dispatch(resetGame())}>
-          reset game
-        </button>
+      <StyledButton className="btn reset" onClick={() => dispatch(resetGame())}>
+        reset game
       </StyledButton>
     </StyledGameStats>
   );
