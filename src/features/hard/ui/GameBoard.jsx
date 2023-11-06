@@ -14,15 +14,11 @@ const GameBoard = () => {
     <StyledGameBoard type={currentStep}>
       <Steps />
       <Winner type={"mobile"} />
-      <StyledButton>
-        <button className="btn rules" onClick={() => dispatch(showRules())}>
-          rules
-        </button>
+      <StyledButton className="btn rules" onClick={() => dispatch(showRules())}>
+        rules
       </StyledButton>
-      <StyledButton>
-        <button className="btn rules">
-          <Link to={"/"}>play easy</Link>
-        </button>
+      <StyledButton className="btn hard">
+        <Link to={"/"}>play easy</Link>
       </StyledButton>
     </StyledGameBoard>
   );

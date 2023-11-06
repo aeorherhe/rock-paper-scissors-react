@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { hideRules } from "../hardSlice";
 import { StyledRules } from "../../easy/ui/Rules";
+import { StyledButton } from "../../../styles/GlobalStyles";
 
 const Rules = () => {
   const dispatch = useDispatch();
@@ -10,9 +11,9 @@ const Rules = () => {
       <div className="rules">
         <img src="/images/image-rules-bonus.svg" alt="rules" />
       </div>
-      <button className="btn close" onClick={() => dispatch(hideRules())}>
+      <StyledButton className="btn close" onClick={() => dispatch(hideRules())}>
         <img src="/images/icon-close.svg" alt="close" />
-      </button>
+      </StyledButton>
     </StyledRules>
   );
 };

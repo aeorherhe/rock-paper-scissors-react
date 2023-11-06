@@ -14,15 +14,11 @@ const GameBoard = () => {
     <StyledGameBoard type={currentStep}>
       <Steps />
       <Winner type={"mobile"} />
-      <StyledButton>
-        <button className="btn rules" onClick={() => dispatch(showRules())}>
-          rules
-        </button>
+      <StyledButton className="btn rules" onClick={() => dispatch(showRules())}>
+        rules
       </StyledButton>
-      <StyledButton>
-        <button className="btn rules">
-          <Link to={"hard"}>play hard</Link>
-        </button>
+      <StyledButton className="btn hard">
+        <Link to={"hard"}>play hard</Link>
       </StyledButton>
     </StyledGameBoard>
   );
@@ -38,4 +34,26 @@ export const StyledGameBoard = styled.section`
   text-transform: uppercase;
   letter-spacing: 0.125rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 55rem) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: flex-start;
+    place-content: center;
+    gap: 2rem;
+
+    .rules {
+      grid-column: 3;
+    }
+
+    .hard {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  }
 `;

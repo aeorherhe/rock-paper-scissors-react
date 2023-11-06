@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { playAgain } from "../easySlice";
 import { useSelector, useDispatch } from "react-redux";
+import { StyledButton } from "../../../styles/GlobalStyles";
 
 /* eslint-disable react/prop-types */
 export function Winner({ type }) {
@@ -10,9 +11,12 @@ export function Winner({ type }) {
   return (
     <StyledWinner type={currentStep} className={`${type}`}>
       <h1>{winner}</h1>
-      <button className="btn play-again" onClick={() => dispatch(playAgain())}>
+      <StyledButton
+        className="btn play-again"
+        onClick={() => dispatch(playAgain())}
+      >
         play again
-      </button>
+      </StyledButton>
     </StyledWinner>
   );
 }
@@ -21,7 +25,7 @@ export function Winner({ type }) {
 // /****************** styled component ***************/
 
 export const StyledWinner = styled.div`
-  margin: 1rem auto;
+  margin: 1rem;
   visibility: hidden;
   height: 0;
   overflow: hidden;

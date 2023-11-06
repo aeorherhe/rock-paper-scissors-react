@@ -57,8 +57,8 @@ body {
   color: var(--White);
   background-image: var(--Radial-Gradient);
 }
-
-.btn{
+/* 
+.btn {
   background: none;
   color: var(--White);
   border: none;
@@ -71,7 +71,7 @@ body {
   transition: var(--transition);
   outline: none;
   cursor: pointer;
-}
+} */
 
 a{
   text-decoration: none;
@@ -86,11 +86,21 @@ a{
 
 export default GlobalStyles;
 
-export const StyledButton = styled.div`
-  border: var(--line);
-  width: fit-content;
-  margin: 1rem auto;
+export const StyledButton = styled.button`
+  background: none;
   border-radius: var(--border-radius);
+  border: var(--line);
+  color: var(--White);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.125rem;
+  margin: 1rem auto;
+  outline: none;
+  padding: 0.75rem 1.5rem;
+  text-transform: uppercase;
+  transition: var(--transition);
+  width: fit-content;
 `;
 
 export const StyledWinnerRipple = styled.div`

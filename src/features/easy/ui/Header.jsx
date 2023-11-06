@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { showStatsFunc } from "../easySlice";
 import GameStats from "./GameStats";
 import { getLocalStorage } from "../../../services/localStorage";
+import { StyledButton } from "../../../styles/GlobalStyles";
 
 const Header = () => {
   const {
@@ -19,7 +20,7 @@ const Header = () => {
       <div className="score" onClick={() => dispatch(showStatsFunc())}>
         <p>Score</p>
         <h1>{sessionScore?.score || score}</h1>
-        <button className="btn stats-btn">stats</button>
+        <StyledButton className="stats-btn">stats</StyledButton>
       </div>
       <GameStats />
     </StyledHeader>
@@ -74,6 +75,7 @@ export const StyledHeader = styled.header`
   }
 
   .stats-btn {
+    margin: 0;
     display: none;
   }
 

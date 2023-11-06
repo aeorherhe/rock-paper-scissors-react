@@ -202,15 +202,16 @@ export const StyledSteps = styled.div`
   }
 
   @media (min-width: 45rem) {
-    max-width: 30rem;
+    max-width: 40rem;
     img {
       padding: 2rem;
     }
   }
 
   @media (min-width: 55rem) {
-    max-width: 50rem;
-    padding: 4rem 0;
+    /* border: var(--line); */
+    max-width: 60rem;
+    padding: 4rem;
 
     .game-card {
       padding: 1.5rem;
